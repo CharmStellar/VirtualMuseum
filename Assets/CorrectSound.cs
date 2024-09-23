@@ -38,7 +38,11 @@ public class CorrectSound : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        meshRenderer.material = materialGreen;
+        if (other.CompareTag(targetTag))
+        {
+           
+            meshRenderer.material = materialGreen;
+        }
     }
 
     private void OnTriggerExit(Collider other)
